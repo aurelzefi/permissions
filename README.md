@@ -3,7 +3,7 @@
 This package allows you to add permissions to users simply and without much configuration.
 First, install the package:
 
-```php
+```
 composer require aurelzefi/permissions
 ```
 
