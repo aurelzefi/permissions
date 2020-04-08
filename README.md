@@ -19,10 +19,10 @@ php artisan vendor:publish --tag=permissions-config
 
 In this file you should return the array of permissions on your application. The package will then register those in the Laravel's gate authorization logic.
 
-Next, you should run your  migrations. This will add a new `permissions` field to the users table.
+Next, you should run your  migrations. This will add a new ``permissions`` field to the users table.
 
 ### Setting Permissions
-```
+```php
 $user->permissions = [
     'manage-likes', 'manage-comments', 'manage-shares',
 ];
@@ -31,7 +31,7 @@ $user->save();
 ```
 
 ### Getting Permissions
-```
+```php
 $users->permissions;
 
 // ['manage-likes', 'manage-comments', 'manage-shares']
@@ -39,6 +39,8 @@ $users->permissions;
 
 
 ### Checking Permission
-```
+```php
 $user->can('manage-likes');
+
+// true
 ```
