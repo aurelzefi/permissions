@@ -7,7 +7,7 @@ trait HandlesPermissionsAttribute
     /**
      * Get the permissions attribute.
      *
-     * @param  array  $attribute
+     * @param  string  $attribute
      * @return array
      */
     public function getPermissionsAttribute($attribute)
@@ -21,7 +21,7 @@ trait HandlesPermissionsAttribute
      * @param  array  $attribute
      * @return void
      */
-    public function setPermissionsAttribute($attribute)
+    public function setPermissionsAttribute(array $attribute)
     {
         $this->attributes['permissions'] = implode(',', $attribute);
     }
