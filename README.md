@@ -13,7 +13,7 @@ Then, add the `Permissions\HandlesPermissionsAttribute` trait to the `App\User` 
 
 ### Publish The Config File
 
-```php
+```
 php artisan vendor:publish --tag=permissions-config
 ```
 
