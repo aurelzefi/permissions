@@ -14,13 +14,7 @@ class PermissionsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if ($this->app->runningInConsole()) {
-            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
-            $this->publishes([
-                __DIR__.'/../config/permissions.php' => config_path('permissions.php'),
-            ], 'permissions-config');
-        }
     }
 
     /**
@@ -30,6 +24,14 @@ class PermissionsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if ($this->app->runningInConsole()) {
+            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
+            $this->publishes([
+                __DIR__.'/../config/permissions.php' => config_path('permissions.php'),
+            ], 'permissions-config');
+        }
+
         foreach (config('permissions') ?? [] as $permission) {
             Gate::define($permission, function ($user) use ($permission) {
                 return in_array($permission, $user->permissions);
