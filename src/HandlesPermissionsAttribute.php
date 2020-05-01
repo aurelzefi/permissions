@@ -1,8 +1,8 @@
 <?php
 
-namespace Permissions;
+namespace Aurel\Permissions;
 
-trait HandlesPermissionsAttribute
+trait HasPermissions
 {
     /**
      * Get the permissions attribute.
