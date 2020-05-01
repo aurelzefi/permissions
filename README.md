@@ -5,9 +5,9 @@ First, install the package:
 
     composer require aurelzefi/permissions
 
-Then make sure to add `Permissions\PermissionsServiceProvider` in the providers array in your `app.php` config file.
+Then make sure to add `Aurel\Permissions\PermissionsServiceProvider` in the providers array in your `app.php` config file.
 
-Then, add the `Permissions\HandlesPermissionsAttribute` trait to the `App\User` class. This trait will manage storage / retrieval of permissions in the database.
+Then, add the `Aurel\Permissions\HandlesPermissionsAttribute` trait to the `App\User` class. This trait will manage storage / retrieval of permissions in the database.
 
 ### Publish The Config File
 
