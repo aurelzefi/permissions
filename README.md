@@ -16,17 +16,19 @@ git clone git@github.com:aurelzefi/permissions.git
 ```
 
 ```json
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./../permissions"
-        }
-    ]
+"repositories": [
+    {
+        "type": "path",
+        "url": "./../permissions"
+    }
+]
 ```
 
 ```bash
 composer require aurelzefi/permissions
 ```
+
+## Usage
 
 Add the `Aurel\Permissions\HasPermissions` trait to your user model.
 
