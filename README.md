@@ -1,4 +1,5 @@
 # Permissions
+
 A package to easily add permissions in your Laravel project.
 
 ## Requirements
@@ -8,7 +9,11 @@ A package to easily add permissions in your Laravel project.
 
 ## Installation
 
-Add the package to your repositories and then require it:
+Clone this repo, add the package to your repositories and then require it:
+
+```bash
+git clone git@github.com:aurelzefi/permissions.git
+```
 
 ```json
     "repositories": [
