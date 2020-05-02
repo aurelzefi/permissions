@@ -1,21 +1,45 @@
-## Add permissions to users
+#Permissions
+A package to easily add permissions in your Laravel project.
 
-This package allows you to add permissions to users simply and without much configuration.
-First, install the package:
+## Requirements
 
-    composer require aurelzefi/permissions
+- PHP 7.4 or higher
+- Laravel 7.0 or higher
 
-Then make sure to add `Aurel\Permissions\PermissionsServiceProvider` in the providers array in your `app.php` config file.
+## Installation
 
-Then, add the `Aurel\Permissions\HandlesPermissionsAttribute` trait to the `App\User` class. This trait will manage storage / retrieval of permissions in the database.
+Add the package to your repositories and then require it:
+
+```json
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./../permissions"
+        }
+    ]
+```
+
+```bash
+composer require aurelzefi/permissions
+```
+
+Add the `Aurel\Permissions\HandlesPermissionsAttribute` trait to your user model.
 
 ### Publish The Config File
 
-    php artisan vendor:publish --tag=permissions-config
+In this file you should define the list of permissions in your application.
 
-In this file you should return the array of permissions on your application. The package will then register those in the Laravel's gate authorization logic.
+```bash
+php artisan vendor:publish --tag=permissions-config
+```
 
-Next, you should run your  migrations. This will add a new `permissions` field to the users table.
+### Run migrations
+
+Next, you should run your  migrations. This will add a new `permissions` field to your users table.
+
+```bash
+php artisan migrate
+```
 
 ### Setting Permissions
 
@@ -28,6 +52,7 @@ $user->save();
 ```
 
 ### Getting Permissions
+
 ```php
 $user->permissions;
 
