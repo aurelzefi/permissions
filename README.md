@@ -1,4 +1,4 @@
-#Permissions
+# Permissions
 A package to easily add permissions in your Laravel project.
 
 ## Requirements
@@ -23,7 +23,7 @@ Add the package to your repositories and then require it:
 composer require aurelzefi/permissions
 ```
 
-Add the `Aurel\Permissions\HandlesPermissionsAttribute` trait to your user model.
+Add the `Aurel\Permissions\HasPermissions` trait to your user model.
 
 ### Publish The Config File
 
