@@ -1,6 +1,6 @@
 {
     "name": "aurelzefi/permissions",
-    "description": "A package to easily add permissions in your Laravel project.",
+    "description": "A package to easily add permissions to your Laravel project.",
     "license": "MIT",
     "authors": [
         {

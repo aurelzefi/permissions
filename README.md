@@ -1,6 +1,6 @@
 # Permissions
 
-A package to easily add permissions in your Laravel project.
+A package to easily add permissions to your Laravel project.
 
 ## Requirements
 
